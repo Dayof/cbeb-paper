@@ -43,11 +43,11 @@
 	
  	Laparoscopic surgery demands an operating surgeon to make the medical procedure and a camera driver to show the surgeon the location of the operative field. This structure come with lots of problems, e.g. conflicts about the optimum visualization, fatigue of the assistant who holds the camera \cite{pmid28643066}, inaccurate movements, image tremors.
  	
- 	There are many projects to solve the problems about the fatigue during laparoscopic surgery, e.g., EndoAssist \cite{pmid25484949}, Vicky \cite{pmid17867952}. These solutions are very expansive to apply to Brazilian's public health system (\textit{SUS}). Aiming to develop a project with low costs and also help the operating surgeon to procedure the surgery, the project CLARA was created at \textit{LARA} (Robotics and Automation Laboratory, University of Brasilia).
+ 	There are many projects to solve the problems about the fatigue during laparoscopic surgery, e.g., EndoAssist \cite{pmid25484949}, Vicky \cite{pmid17867952}. These solutions are very expansive to apply to Brazilian's public health system (\textit{SUS}). In this context, CLARA is a low-cost project created at \textit{LARA} (Robotics and Automation Laboratory, University of Brasilia) to help the operating surgeon to procedure the surgery.
  	
  	% clara project 
  	
- 	\textit{CLARA}'s project was designed to help the operating surgeon to perform the procedure with full control of the tools through effective interfaces, voice and joystick linked with the laparoscopic grasper. The voice control was compared with foot pedal interface, and they concluded that voice control was more accurate and had the advantage of not requiring the surgeon to look away from the operative field \cite{pmid16844449}. 
+ 	\textit{CLARA}'s project was designed to help the operating surgeon to perform the procedure with full control of the tools through effective interfaces, voice recognition and a joystick linked with the laparoscopic grasper. The voice control was compared with foot pedal interface, and they concluded that voice control was more accurate and had the advantage of not requiring the surgeon to look away from the operative field \cite{pmid16844449}. 
  	
  	% clara software and other softwares to aid biomedical robots (ros)
  	
@@ -63,15 +63,46 @@
 	
 	\section{Software Design}
 	
-	% libraries used
+	% modules and qt
+	An overview of CLARA software is illustrated at Figure~\ref{}. \textit{Qt5}\cite{qt} is used as the main framework of the system. \textit{QT} is an open source (\textit{LGPLv3}\cite{lgpl}), cross-platform framework with a thread library that helps control the asynchronous modules and a GUI component to produce its visualization.
 	
-	Even thought there are other frameworks to help produce robotics projects, like ROS \cite{288}, the usability and the user experience was put as a priority to produce \textit{CLARA}'s software. The framework \textit{QT}\cite{qt} was used to develop the software, is a cross-platform framework, offers tools to pass messages (events) between modules in a secure and fast way and have a easy GUI (graphical user interface) module to use.
-
-	% modules 
+	\subsection{Core}
+	
+	% logging
+	
+	% database 
+		
+	\subsection{Network}
+		
+	\subsection{Speech}
+	
+	% julius
+	\textit{Julius}\cite{lee2009recent} is a open-source (\textit{GPL}\cite{gpl}) speech recognition.
+	
+	\subsection{Vision}
+	
+	% opencv and boost
+	This module is responsible to estimate the 2D pose of a single instrument tip\cite{vision} using \textit{OpenCV} and \textit{Boost}'s libraries.
+	
+	\subsection{Motor}
+	
+	\subsection{Joystick}
+	
+	\subsection{UI}
+	
+	The usability and user experience was put as a priority to produce \textit{CLARA}'s software. 
+	
+	% pages control
+	
+	\subsection{Test}
 	
 	\section{Conclusion}
 
-	% Why the software design elaborated on CLARA project was important and efficient and effective 
+	% Why the software design elaborated on CLARA project was important and efficient and effective
+	Develop a software to be applied in a public hospital in Brazil demands a few worries, e.g. use cross-platforms frameworks since we don't know the operating system used on hospital machines, choose open source frameworks and libraries to help achieve the low-cost aim.
+	
+	% libraries used
+	CLARA software covered all the attributes above using \textit{Julius} and \textit{QT} frameworks. 
 	
 	\section{Acknowledgements}
 	
