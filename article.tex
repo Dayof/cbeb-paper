@@ -1,11 +1,19 @@
 \documentclass{svproc}
+\usepackage[a4paper, bindingoffset=0.2in, 
+			left=.7in, right=.7in,
+			top=1in, bottom=1in,
+			footskip=.25in]{geometry}
+\setlength{\columnsep}{30pt}
 
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{multicol}
+
 \pagestyle{plain}
+
+\graphicspath {{images/}}
 
 \def\UrlFont{\rmfamily}
 
@@ -64,7 +72,14 @@
 	\section{Software Design}
 	
 	% modules and qt
-	An overview of CLARA software is illustrated at Figure~\ref{}. \textit{Qt5}\cite{qt} is used as the main framework of the system. \textit{QT} is an open source (\textit{LGPLv3}\cite{lgpl}), cross-platform framework with a thread library that helps control the asynchronous modules and a GUI component to produce its visualization.
+	An overview of CLARA software is illustrated at Figure~\ref{fig:clara}. \textit{Qt5}\cite{qt} is used as the main framework of the system. \textit{QT} is an open source (\textit{LGPLv3}\cite{lgpl}), cross-platform framework with a thread library that helps control the asynchronous modules and a GUI component to produce its visualization.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\textwidth]{clara.png}
+		\caption{CLARA software design overview.}
+		\label{fig:clara}
+	\end{figure}
 	
 	\subsection{Core}
 	
